@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Redux2Container from './ex/Redux2Container'
+import Redux4Container from './ex/Redux4Container'
+import Redux6Container from './ex-middleware/Redux6Container'
+import { Link } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    <Redux2Container/>
+    <hr/>
+    <Redux4Container/>
+    <hr/>
+    <Redux6Container/>
+    <hr/>
+    <Link to="/PostListPage">POSTLITS 이동</Link>
+    </>
+  )
 }
 
-export default App;
+export default App
